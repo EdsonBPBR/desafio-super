@@ -1,15 +1,100 @@
 {% extends 'app_portal/_layouts/base.html' %}
 
 {% block titulo_pagina %}
-<title>Home Page</title>
+<title>Captive Portal</title>
 {% endblock %}
 
 {% block conteudo_main %}
-<div class="container mt-5">
-    <div class="text-center">
-        <h1 class="display-4">Bem-vindo ao portal!</h1>
-        <p class="lead">Essa página está sendo carregada a partir de um template com Bootstrap!</p>
-        <a href="#" class="btn btn-primary">Clique aqui</a>
+<div class="container mt-4">
+
+    <!-- ALERTA DE ATRASO -->
+     <div class=" col-md-4">
+    <div class="alert alert-warning shadow-sm" role="alert">
+        <strong>Atenção:</strong> Existem faturas em atraso. <br>
+        <span class="small d-block mt-1">
+        </span>
+        </div>
     </div>
+    
+    <div class="row g-3 mt-2">
+    
+    <!-- CARTÃO ÚNICO OCUPANDO TODA A LINHA -->
+    <div class="col-md-8">
+        <div class="card h-100 shadow-sm">
+            <!-- Alinhamento à esquerda apenas no conteúdo -->
+            <div class="card-body text-start">
+                <p class="card-text">Prezado cliente,</p>
+                <p class="card-text">
+                    Identificamos que o pagamento referente ao seu plano X está em atraso há 15 dias, conforme os termos contratuais do nosso plano Super. Você retornará automaticamente a utilizar todos os nossos serviços quando efetuar o pagamento.
+                </p>
+                <p class="card-text">Lembramos que o atraso na quitação de débitos gera:</p>
+                <p style="color: rgb(234, 13, 13);">&#10003; Suspensão temporária do plano após X dias</p>
+                <p style="color: rgb(234, 13, 13);">&#10003; Cobrança de multa diária</p>
+                <a href="#" class="btn btn-success mt-3">Pagar agora</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    
+                    <p class="card-text">Atraso referente</p>
+                  
+                </div>
+            </div>
+        </div>
+
+</div>
+
+    <!-- ALERTA DE SERVIÇOS PENDENTES -->
+    <div class="alert alert-danger shadow-sm mt-4" role="alert">
+        <strong>Serviços Temporariamente Suspensos:</strong> 
+    </div>
+
+    <!-- CARTÕES COM OPÇÕES DE PAGAMENTO -->
+    <div class="row g-3 mt-2">
+        <!-- CARTÃO 1 -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Serviços de Internet Cabeada FTTH</h5>
+                    <p class="card-text">Plano Mensal de 400MB</p>
+                    <p class="card-text">R$ 75,00</p>
+                    <p class="card-text">Status: Pendente</p>
+                    <p class="card-text">Data de vencimento: xx-xx-xxxx</p>
+                    <a href="#" class="btn btn-success">Pagar agora</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARTÃO 2 -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Multa</h5>
+                    <p class="card-text">Atraso referente</p>
+                    <p class="card-text">R$ 75,00</p>
+                    <p class="card-text">Status: Pendente</p>
+                    <p class="card-text">Data de vencimento: xx-xx-xxxx</p>
+                    <a href="#" class="btn btn-success">Pagar agora</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARTÃO 3 -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Multa</h5>
+                    <p class="card-text">Atraso referente</p>
+                    <p class="card-text">R$ 75,00</p>
+                    <p class="card-text">Status: Pendente</p>
+                    <p class="card-text">Data de vencimento: xx-xx-xxxx</p>
+                    <a href="#" class="btn btn-success">Pagar agora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 {% endblock %}

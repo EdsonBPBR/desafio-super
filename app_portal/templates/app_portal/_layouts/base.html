@@ -12,15 +12,61 @@
 
     <!-- Meta responsiva -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+  body {
+    background-image: url("{% static 'app_portal/img/super_connect_reduced-scaled-1.png' %}");
+    background-size: cover;         /* cobre toda a tela */
+    background-repeat: no-repeat;   /* não repete */
+    background-position: center;    /* centraliza */
+    background-attachment: fixed;   /* mantém fixo ao rolar */
+  }
+</style>
 </head>
 
 <body>
     <header>
-        <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid" id="navbar">
-                <span class="navbar-brand mb-0 h1">Navbar teste</span>
-            </div>
-        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <!-- LOGO -->
+    <a class="navbar-brand" href="#">
+      <img src="{% static 'app_portal/img/Group-r45uuv6tfe81q1440wjjdf1b5k23mpnbvber2u29as 1.png' %}" alt="Logo" width="80" height="40" class="d-inline-block align-text-top">
+    </a>
+
+    <!-- BOTÃO MOBILE -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- LINKS -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto fw-semibold">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pagamentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Serviços</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Reclamações</a>
+        </li>
+        <!-- ÍCONE WHATSAPP (SAC) -->
+        <li class="nav-item mx-2">
+          <a class="nav-link text-success" href="https://wa.me/seunumerodetelefone" target="_blank" title="Atendimento WhatsApp">
+            <i class="bi bi-whatsapp" style="font-size: 1.5rem;"></i>
+          </a>
+        </li>
+
+        <!-- BOTÃO LOGIN -->
+        <li class="nav-item">
+          <a class="btn btn-outline-primary ms-2" href="#">Área do Cliente</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
     </header>
     <main> {% block conteudo_main %} {% endblock %}</main>
     <footer>
