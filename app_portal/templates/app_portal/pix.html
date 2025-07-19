@@ -1,0 +1,17 @@
+{% extends 'app_portal/_layouts/base.html' %}
+
+{% block titulo_pagina %}
+<title>Pagamento via Pix</title>
+{% endblock %}
+
+{% block conteudo_main %}
+<div class="container mt-4">
+    <h2>Pague com Pix</h2>
+    <p>Escaneie o QR Code abaixo ou copie o código Pix:</p>
+    <img src="{{ qr_code_img }}" alt="QR Code Pix" style="max-width:300px;">
+    <br>
+    <label for="pixcode" class="mt-3 mb-1">Código Pix:</label>
+    <textarea id="pixcode" readonly style="width:100%;height:80px;">{{ qr_code_str }}</textarea>
+    <button class="btn btn-primary mt-2" onclick="navigator.clipboard.writeText(document.getElementById('pixcode').value)">Copiar código Pix</button>
+</div>
+{% endblock %}
